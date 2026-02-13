@@ -39,7 +39,10 @@ repo init -u https://android.googlesource.com/platform/manifest -b android-11.0.
 
 # 3. Sync (~30-40 Min, depends on internet connection)
 repo sync -j4 -c
+```
 
+## Build `Android 11`
+```bash
 # 4. Apply build-environment
 source build/envsetup.sh
 lunch aosp_arm64-eng
