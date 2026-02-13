@@ -1,5 +1,5 @@
-# Operating System
-Please use `Ubuntu 20.04 LTS` for compatibility and depencies purposes.
+> [!NOTE]
+> Please use `Ubuntu 20.04 LTS` for compatibility and depencies purposes.
 
 ### WSL
 > wsl --install -d Ubuntu-20.04
