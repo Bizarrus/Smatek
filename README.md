@@ -1,3 +1,3 @@
 # Installations
 
-[Android 11](tree/android-11)
+[Android 11](https://github.com/Bizarrus/Smatek/tree/android-11?tab=readme-ov-file)
