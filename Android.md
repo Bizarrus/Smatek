@@ -36,6 +36,6 @@ repo sync -j4 -c
 source build/envsetup.sh
 lunch aosp_arm64-eng
 
-# 5. Build! (~40-50 Min, depends on hardware)
+# 5. Build! (~1-3 Hrs, depends on hardware)
 make -j16
 ```
