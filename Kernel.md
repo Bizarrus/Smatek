@@ -12,3 +12,5 @@ make rockchip_linux_defconfig ARCH=arm64
 # Build! (~10 Minutes, depends on hardware)
 make -j16 ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu-
 ```
+
+If the build was successfully, you can continue with [Integrating the Kernel](Integrate.md)
