@@ -37,5 +37,6 @@ source build/envsetup.sh
 lunch aosp_arm64-eng
 
 # 5. Build! (~1-3 Hrs, depends on hardware)
+# Sample: i9-11900K with 32GB RAM = 2,3 Hrs
 make -j16
 ```
