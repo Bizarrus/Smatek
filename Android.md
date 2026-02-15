@@ -40,3 +40,5 @@ lunch aosp_arm64-eng
 # Sample: i9-11900K with 32GB RAM = 2,3 Hrs
 make -j16
 ```
+
+If the build was successfully, you can continue with [Kernel-Building](Kernel.md)
