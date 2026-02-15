@@ -13,3 +13,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt install -y build-essential gi
 1. [Download and build Android](Android.md)
 2. [Download and build Kernel from Rockchip](Kernel.md)
 3. [Integrate the Kernel in Android](Integrate.md)
+4. Update Configurations
+5. Integrate Smatek & Rockchip Service
+6. Adding Pre-Installed Apps
+7. [Flashing Device](Flashing.md)
