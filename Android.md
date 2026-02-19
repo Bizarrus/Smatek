@@ -30,11 +30,43 @@ repo init -u https://android.googlesource.com/platform/manifest -b android-13.0.
 repo sync -j$(nproc) -c
 ```
 
+## Pre-Configure the Build
+```bash
+# Disable Google Services
+export PRODUCT_USE_GOOGLE_SERVICES=false
+
+# Create Go-Definitions
+mkdir -p device/aosp/go
+
+# create AndroidProducts.mk
+cat > device/aosp/go/AndroidProducts.mk << 'EOF'
+PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/aosp_go_arm.mk
+
+COMMON_LUNCH_CHOICES := \
+    aosp_go_arm-eng \
+    aosp_go_arm-userdebug
+EOF
+
+# create aosp_go_arm.mk
+cat > device/aosp/go/aosp_go_arm.mk << 'EOF'
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_arm.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/go_defaults.mk)
+
+PRODUCT_NAME := aosp_go_arm
+PRODUCT_DEVICE := generic
+PRODUCT_BRAND := Android
+PRODUCT_MODEL := AOSP on ARM (Go)
+EOF
+```
+
 ## Build `Android 13`
 ```bash
 # 4. Apply build-environment
 source build/envsetup.sh
-lunch aosp_arm64-eng
+
+# Set the new Go target
+lunch aosp_go_arm-eng
 
 # 5. Build! (~1-3 Hrs, depends on hardware)
 # Sample: i9-11900K with 32GB RAM = 2,3 Hrs
