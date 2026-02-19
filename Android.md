@@ -38,7 +38,7 @@ lunch aosp_arm64-eng
 
 # 5. Build! (~1-3 Hrs, depends on hardware)
 # Sample: i9-11900K with 32GB RAM = 2,3 Hrs
-make -j$(nproc)
+make -j$(nproc) SKIP_API_CHECKS=true WITHOUT_CHECK_API=true
 ```
 
 If the build was successfully, you can continue with [Kernel-Building](Kernel.md)
