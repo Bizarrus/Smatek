@@ -18,19 +18,19 @@ echo 'export CCACHE_DIR=~/.ccache' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-## Download `Android 11`
+## Download `Android Go 13`
 ```bash
 # 1. Workspace
 mkdir -p ~/Android/aosp && cd ~/Android/aosp
 
-# 2. AOSP Android 11
-repo init -u https://android.googlesource.com/platform/manifest -b android-11.0.0_r48
+# 2. AOSP Android Go 13
+repo init -u https://android.googlesource.com/platform/manifest -b android-13.0.0_r1
 
 # 3. Sync (~30-40 Min, depends on internet connection)
 repo sync -j4 -c
 ```
 
-## Build `Android 11`
+## Build `Android 13`
 ```bash
 # 4. Apply build-environment
 source build/envsetup.sh
