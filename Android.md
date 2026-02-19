@@ -27,7 +27,7 @@ mkdir -p ~/Android/aosp && cd ~/Android/aosp
 repo init -u https://android.googlesource.com/platform/manifest -b android-13.0.0_r1
 
 # 3. Sync (~30-40 Min, depends on internet connection)
-repo sync -j4 -c
+repo sync -j$(nproc) -c
 ```
 
 ## Build `Android 13`
@@ -38,7 +38,7 @@ lunch aosp_arm64-eng
 
 # 5. Build! (~1-3 Hrs, depends on hardware)
 # Sample: i9-11900K with 32GB RAM = 2,3 Hrs
-make -j16
+make -j$(nproc)
 ```
 
 If the build was successfully, you can continue with [Kernel-Building](Kernel.md)
