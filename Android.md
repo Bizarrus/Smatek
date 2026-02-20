@@ -57,6 +57,7 @@ PRODUCT_NAME := aosp_go_arm
 PRODUCT_DEVICE := generic
 PRODUCT_BRAND := Android
 PRODUCT_MODEL := AOSP on ARM (Go)
+PRODUCT_IS_GO_DEVICE := true
 EOF
 ```
 
